@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "A Sketchy Book",
+  "name": "A Sketchy Book, a web app created using React",
   "icons": [
     {
       "src": "favicon.ico",
