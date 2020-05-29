@@ -8,8 +8,8 @@ A react base application to take notes with a sketchy look.
 * Clone it
 * Install json-server `npm i -g json-server`
 * Open `json-server` folder and run `run.bat` file.
-* `npm install` to install dependency.
-*  `npm start` to run development server.
+* Run `npm install` in root folder to install dependency.
+* `npm start` to run development server.
 
 ## Features
 * Sketchy look [wiredjs](https://wiredjs.com/) components.
