@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url('./fonts/GloriaHallelujah-Regular.ttf')
+}
+body{
+    font-family:'Gloria Hallelujah', sans-serif;
+  
+}
+.modal-backdrop.show {
+    opacity: 0.6;
+}
