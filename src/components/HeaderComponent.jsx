@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
-import { Nav, NavItem, NavbarBrand, Modal,ModalHeader,ModalFooter, ModalBody, Row,Col, NavLink } from "reactstrap";
+import {
+  Nav,
+  NavItem,
+  Navbar,
+  NavbarBrand,
+  Modal,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  Row,
+  Col,
+  NavLink,
+} from "reactstrap";
 import {
   WiredButton,
   WiredDivider,
@@ -70,7 +82,29 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav justified className="p-2 fixed">
+        <Navbar
+          className="container"
+          fixed="top"
+          color="transparent"
+          light
+
+        >
+          <NavbarBrand href="https://github.com/Ayush-Rajniwal/">
+            A Sketchy Notebook
+          </NavbarBrand>
+
+          <Nav navbar>
+            <NavItem>
+              <wired-button
+                onClick={() => this.setState({ isOpen: !this.state.isOpen })}
+                elevation="2"
+              >
+                Add Post
+              </wired-button>
+            </NavItem>
+          </Nav>
+        </Navbar>
+        {/* <Nav justified className="p-2 fixed">
           <NavItem>
             <wired-button onClick={() => {
               window.open("https://github.com/Ayush-Rajniwal/");
@@ -89,13 +123,10 @@ class Header extends Component {
               Add Post
             </wired-button>
           </NavItem>
-        </Nav>
-        <wired-divider />
+        </Nav> */}
 
         <Modal centered isOpen={this.state.isOpen} toggle={this.modalToggle}>
-          <wired-card
-            style={{ color: this.state.cardColor }}
-          >
+          <wired-card style={{ color: this.state.cardColor }}>
             <ModalHeader toggle={this.modalToggle}>Add Post</ModalHeader>
             <Row className="pb-3 ml-3 mr-3 align-item-center">
               <Col xs="4">Set Card Color</Col>
@@ -163,7 +194,11 @@ class Header extends Component {
                 rows="6"
                 cols="12"
                 placeholder="Story here"
-                style={{ color:this.state.cardColor ,border: "none", width: "100%" }}
+                style={{
+                  color: this.state.cardColor,
+                  border: "none",
+                  width: "100%",
+                }}
               ></textarea>
             </ModalBody>
 
